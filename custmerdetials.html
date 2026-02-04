@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Now Form</title>
+</head>
+<body>
+
+<h2>User Details</h2>
+
+<form action="https://formsubmit.co/sathvikrobotics@gmail.com" 
+      method="POST" 
+      enctype="multipart/form-data"> 
+
+  <!-- Allow image attachments -->
+  <input type="hidden" name="allow-attachments" value="true">
+
+  <label>Name:</label>
+  <input type="text" name="Name" value="enter your name." required><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="Email" value="enter your mail." required><br><br>
+
+  <label>Product:</label>
+  <input type="text" name="Product" value="My Product" required><br><br>
+
+  <label>Bike Model:</label>
+  <input type="text" name="Bike Model" value="z900" required><br><br>
+
+  <a href="">
+    <img src="" alt="">
+  </a>
+
+  <label>uplod the payment receipts.</label><br><br>
+  <input type="file" name="attachment" accept="image/*" required><br><br>
+
+  <button type="submit">Buy Now</button>
+</form>
+
+</body>
+</html>

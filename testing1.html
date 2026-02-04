@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Container to enable horizontal scroll on small screens */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Basic table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 400px; /* Prevents table from shrinking too much */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Table Example</h2>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>John Doe</td>
+      <td>28</td>
+      <td>New York</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Jane Smith</td>
+      <td>34</td>
+      <td>London</td>
+      <td>UK</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

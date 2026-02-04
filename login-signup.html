@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #strength{
+        margin-top:10px;
+        font-weight:bold;
+    }
+    </style>
+</head>
+<body>
+   <center>user_id: <input type="text" name="user_id"> <br><br>
+
+    password: <input type="password" name="password" id="password" onkeyup="checkStrength()" >
+    <!-- onkeyup="checkstrength() == evert time user types a key the fubnction checkstrength() runs" -->
+    <br><br>
+    <p id="strength"></p>
+    <button>submit</button></center>
+
+    
+    <script>
+        function checkStrength(){
+            let pwd = document.getElementById("password").value;
+            let strength=document.getElementById("strength");
+            
+
+            let hasLower = /[a-z]/.test(pwd);
+            let hasUpper = /[A-Z]/.test(pwd);
+            let hasNumber = /[0-9]/.test(pwd);
+            let hasSpecial = /[!@#$%^&*?]/.test(pwd);
+            let longEnough = pwd.length >=8;
+
+            let score = 0;
+            if (hasLower) score++;
+            if (hasUpper) score++;
+            if (hasNumber) score++;
+            if (hasSpecial) score++;
+            if (longEnough) score++;
+
+            if (pwd.length === 0){
+                strength.innerHTML="Enter a password.";
+                
+                return;
+            }
+
+            else if (score <=2){
+                strength.innerHTML ="weak password ❌";
+                strength.style.color="red";
+            }
+
+            else if (score===3||score===4){
+                strength.innerHTML="medium password ⚠️";
+                strength.style.color="orange";
+            }
+
+            else {
+                strength.innerHTML="strong password ✅";
+                strength.style.color="green";
+            }
+        }
+
+    </script>
+</body>
+</html>

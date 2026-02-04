@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return f1(event)">
+    Name: <input type="text" id="name">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function f1(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+
+    if (name == "") {
+        alert("Name can't be empty!");
+        return false;
+    }
+    
+}
+</script>
+
+</body>
+</html>
